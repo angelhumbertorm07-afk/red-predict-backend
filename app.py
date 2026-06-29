@@ -319,6 +319,10 @@ partidos = [
     },
 ]
 
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({"status": "ok"})
+
 @app.route('/api/predicciones', methods=['GET'])
 def get_predicciones():
     return jsonify(partidos)
